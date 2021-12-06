@@ -1,0 +1,21 @@
+3)SELECT id, value FROM modules_characteristics WHERE type = 11 AND value > 0
+
+4)SELECT name FROM modules WHERE id IN (SELECT id from modules_characteristics WHERE value > 0 EXCEPT SELECT id from modules_characteristics WHERE value < 0) LIMIT 10
+
+5)SELECT * FROM modules WHERE name LIKE '%chassis%' 
+
+6)SELECT * FROM characteristic_type ORDER BY name LIMIT 10
+
+7)UPDATE modules_characteristics SET value = 0 WHERE value < 0
+
+8)SELECT * FROM characteristic_type WHERE id BETWEEN 5 AND 15
+
+9)SELECT COUNT(value) AS result FROM modules_characteristics WHERE type = 2
+
+10)SELECT SUM(value) FROM modules_characteristics WHERE type = (SELECT id FROM characteristic_type WHERE name = 'speed')
+
+1)DELETE FROM templates
+ 
+2)INSERT INTO roles(role)
+	VALUES ('Turbocoffin')
+	
